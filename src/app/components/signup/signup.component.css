@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  top: 130px;
+  position: absolute;
+}
+
+p {
+  top: 110px;
+  position: relative;
+  left: 30px;
+}
+
+.firstStep, .secondStep {
+  position: relative;
+  margin: auto;
+  width: 310px;
+  margin-top: 20px;
+}
+
+
+.form-control {
+  position: relative;
+  margin-top: -35px;
+  margin-left: 90px;
+  width: 250px;
+}
+
+.btn {
+  position: relative;
+  left: 280px;
+}
+
+.form-group > div {
+  font-size: 12px;
+  position: relative;
+  padding: 1px;
+  background-color: white;
+  color: rgb(229, 65, 65);
+  border: white;
+  position: relative;
+  margin-left: 90px;
+}
+
+input.ng-touched.ng-invalid {border:solid red 2px;}
+input.ng-touched.ng-valid {border:solid green 2px;}

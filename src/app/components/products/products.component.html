@@ -1,0 +1,25 @@
+
+<!-- <div ngClass="products" *ngFor = "let product of myProducts">
+  <h4>{{product.name}}</h4>
+  <h5>{{product.price}}</h5>
+  <h6>{{product.quantity}}</h6>
+
+  </div> -->
+<div ngClass="container">
+  <ul ngClass="products">
+    <li *ngFor = "let product of myProducts | slice:0:10">
+      <h4>{{product.name}} </h4>
+      <h6>{{product.price}} </h6>
+      {{product.quantity}}
+    </li>
+  </ul>
+
+  <ul ngClass="products">
+    <li *ngFor = "let product of myProducts | slice:10:15">
+      <h4>{{product.name}} </h4>
+      <h6>{{product.price}} </h6>
+      {{product.quantity}}
+    </li>
+  </ul>
+
+  </div>

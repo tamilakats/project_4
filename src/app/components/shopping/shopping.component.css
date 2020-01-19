@@ -1,0 +1,36 @@
+h5 {
+  position: absolute;
+  top: 103px;
+  left: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 140px;
+}
+
+.myCart {
+  width: 350px;
+  height: 650px;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+div > a {
+  position: absolute;
+  left: 260px;
+  bottom: 35px;
+}
+
+h6 {
+  position: absolute;
+  bottom: 30px;
+}
+
+.products {
+  border: 1px solid black;
+}
+
+

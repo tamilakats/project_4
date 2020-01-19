@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  top: 25px;
+  position: absolute;
+}
+
+.login {
+  position: relative;
+  top: 110px;
+  margin-right: auto;
+  width: 200px;
+}
+
+.about {
+  position: relative;
+  top: 110px;
+  margin-right: auto;
+  width: 300px;
+}
+
+.info {
+  position: relative;
+  top: 110px;
+  width: 300px;
+}
+
+a {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+}
+
+.form-group > div {
+  font-size: 12px;
+  position: relative;
+  padding: 1px;
+  background-color: white;
+  color: rgb(229, 65, 65);
+  border: white;
+}
+
+.signup {
+  position: relative;
+  margin-left: 100px;
+  top: -30px;
+}
