@@ -1,25 +1,51 @@
-
-<!-- <div ngClass="products" *ngFor = "let product of myProducts">
-  <h4>{{product.name}}</h4>
-  <h5>{{product.price}}</h5>
-  <h6>{{product.quantity}}</h6>
-
-  </div> -->
 <div ngClass="container">
-  <ul ngClass="products">
-    <li *ngFor = "let product of myProducts | slice:0:10">
-      <h4>{{product.name}} </h4>
-      <h6>{{product.price}} </h6>
-      {{product.quantity}}
-    </li>
-  </ul>
 
-  <ul ngClass="products">
-    <li *ngFor = "let product of myProducts | slice:10:15">
-      <h4>{{product.name}} </h4>
-      <h6>{{product.price}} </h6>
-      {{product.quantity}}
-    </li>
-  </ul>
+  <form (submit)="search()" ngClass="searchProduct">
+    <div class="input-group">
+      <input type="text" name="search" [(ngModel)]="newSearch" placeholder="Enter the product name"
+        class="form-control">
+      <div class="input-group-btn">
+        <button class="btn btn-dark" type="submit">Search</button>
+      </div>
+    </div>
+    <!-- <input type="submit" value="Search" class="btn btn-dark" ngClass="btnSearch"> -->
+  </form>
 
+  <div ngClass="categories">
+    <div *ngFor="let c of allCategories" id="{{c._id}}" (click)="changeCategory(c._id)" ngClass="oneCategory">
+      {{c.category_name}}
+    </div>
   </div>
+
+  <div *ngFor="let s of searchedProduct" ngClass="searchedProduct">
+    <h3>{{s.product_name}}</h3>
+    <h5>{{s.price}}</h5>
+    <img src="assets/images/{{s.picture}}">
+  </div>
+
+  <div *ngIf="category" ngClass="products">
+    <div *ngFor="let product of catProducts" ngClass="oneProduct" (click)="popup(product)">
+      <h3>{{product.product_name}}</h3>
+      <h5>{{product.price}}</h5>
+      <img src="assets/images/{{product.picture}}" ngClass="product-pic">
+    </div>
+  </div>
+</div>
+
+<div *ngIf="ifPopup" ngClass="popup">
+  <div>
+    <div ngClass="btnClose" (click)="closePopup()">x</div>
+    <h3>{{popupProduct.product_name}}</h3>
+    <h5>{{popupProduct.price}}</h5>
+    <div ngClass="quantity">
+      Quantity:
+      <button (click)="changeQuantity('-')" ngClass="changeQuantity" class="btn btn-dark">-</button>
+      <span>{{quantity}}</span>
+      <button (click)="changeQuantity('+')" ngClass="changeQuantity" class="btn btn-dark">+</button>
+      <br>
+    </div>
+    <img src="assets/images/{{popupProduct.picture}}" ngClass="product-pic">
+    <br>
+    <!-- <button (click)="addToCart(popupProduct._id)">Add to cart</button> -->
+  </div>
+</div>

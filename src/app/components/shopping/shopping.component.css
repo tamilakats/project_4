@@ -8,7 +8,7 @@ h5 {
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  top: 140px;
+  top: 115px;
 }
 
 .myCart {
@@ -16,6 +16,7 @@ h5 {
   height: 650px;
   border: 1px solid black;
   padding: 15px;
+  margin-top: 35px;
 }
 
 div > a {
@@ -27,10 +28,6 @@ div > a {
 h6 {
   position: absolute;
   bottom: 30px;
-}
-
-.products {
-  border: 1px solid black;
 }
 
 

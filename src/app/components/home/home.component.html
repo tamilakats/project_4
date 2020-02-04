@@ -1,4 +1,5 @@
 <div ngClass="container">
+ <!-- только для разработки - потом убрать, (пользователь регистрируется и попадает на страницу с товарами, а если нет-он не может начать покупать) -->
   <a routerLink="/shopping" routerLinkActive="active-link">Start Shopping</a>
   <div ngClass="login">
 
@@ -6,8 +7,7 @@
 
     <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
       <div class="form-group">
-        <input name="email" class="form-control" ngModel type="text" placeholder="User Name" #email="ngModel" required
-          email>
+        <input name="email" class="form-control" ngModel type="email" placeholder="User Name" #email="ngModel" required email>
         <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
           <div *ngIf="email.errors.required">
             Please enter your username(e-mail).
