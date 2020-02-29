@@ -1,0 +1,46 @@
+{"_id":{"$oid":"5e14c0ec78c8e044a4856cea"},"product_name":"banana","quantity":"150","price":{"$numberDecimal":"5.90"},"picture":"banana.jpg","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c10e78c8e044a4856d04"},"product_name":"lemon","quantity":"300","price":{"$numberDecimal":"5.90"},"picture":"lemon.jpeg","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c11a78c8e044a4856d07"},"product_name":"orange","quantity":"190","price":{"$numberDecimal":"4.90"},"picture":"orange.jpg","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c12678c8e044a4856d0a"},"product_name":"apple","quantity":"150","price":{"$numberDecimal":"9.90"},"picture":"apple.jpeg","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c14278c8e044a4856d13"},"product_name":"pear","quantity":"130","price":{"$numberDecimal":"11.90"},"picture":"pear.jpg","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c15b78c8e044a4856d18"},"product_name":"grapefruit","quantity":"80","price":{"$numberDecimal":"6.90"},"picture":"grapefruit.jpg","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c17578c8e044a4856d21"},"product_name":"persimmon","quantity":"95","price":{"$numberDecimal":"12.90"},"picture":"persimmon.png","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c18e78c8e044a4856d26"},"product_name":"kiwi","quantity":"50","price":{"$numberDecimal":"25.90"},"picture":"kiwi.jpg","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c1a178c8e044a4856d29"},"product_name":"pomegranate","quantity":"175","price":{"$numberDecimal":"12.90"},"picture":"pomegranate.jpeg","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e14c1b278c8e044a4856d32"},"product_name":"pineapple","quantity":"60","price":{"$numberDecimal":"29.90"},"picture":"pineapple.png","category":{"$oid":"5e29e78c0d4d841ccb390647"}}
+{"_id":{"$oid":"5e11f39278c8e044a4854114"},"product_name":"sweet potato","quantity":"190","price":{"$numberDecimal":"9.90"},"picture":"batata.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f3cc78c8e044a4854128"},"product_name":"zucchini","quantity":"130","price":{"$numberDecimal":"9.90"},"picture":"zucchini.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f42178c8e044a4854144"},"product_name":"cabbage","quantity":"150","price":{"$numberDecimal":"4.90"},"picture":"cabbage.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f43078c8e044a485414d"},"product_name":"broccoli","quantity":"50","price":{"$numberDecimal":"9.90"},"picture":"broccoli.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f45778c8e044a485415e"},"product_name":"kohlrabi","quantity":"90","price":{"$numberDecimal":"7.90"},"picture":"kohlrabi.jpeg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f46878c8e044a4854165"},"product_name":"red cabbage","quantity":"140","price":{"$numberDecimal":"5.90"},"picture":"red cabbage.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f47a78c8e044a485416e"},"product_name":"cauliflower","quantity":"120","price":{"$numberDecimal":"10.90"},"picture":"cauliflower.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f48d78c8e044a4854173"},"product_name":"potato","quantity":"300","price":{"$numberDecimal":"4.90"},"picture":"potato.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f4a078c8e044a485417a"},"product_name":"corn","quantity":"100","price":{"$numberDecimal":"8.90"},"picture":"corn.jpeg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f4b278c8e044a4854183"},"product_name":"onion","quantity":"200","price":{"$numberDecimal":"4.90"},"picture":"onion.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f4c578c8e044a4854186"},"product_name":"carrot","quantity":"180","price":{"$numberDecimal":"4.90"},"picture":"carrot.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f4d478c8e044a485418b"},"product_name":"cucumber","quantity":"200","price":{"$numberDecimal":"6.90"},"picture":"cucumber.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f4e478c8e044a4854196"},"product_name":"red pepper","quantity":"180","price":{"$numberDecimal":"8.90"},"picture":"red pepper.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f4f478c8e044a485419b"},"product_name":"tomato","quantity":"200","price":{"$numberDecimal":"6.90"},"picture":"tomato.png","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f50978c8e044a48541ad"},"product_name":"beetroot","quantity":"70","price":{"$numberDecimal":"4.90"},"picture":"beetroot.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f51b78c8e044a48541b4"},"product_name":"garlic","quantity":"150","price":{"$numberDecimal":"7.90"},"picture":"garlic.jpeg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f52a78c8e044a48541bd"},"product_name":"pumpkin","quantity":"70","price":{"$numberDecimal":"8.90"},"picture":"pumpkin.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e11f37278c8e044a4854105"},"product_name":"eggplant","quantity":"100","price":{"$numberDecimal":"6.90"},"picture":"eggplant.jpg","category":{"$oid":"5e29e7120d4d841ccb390646"}}
+{"_id":{"$oid":"5e14c44278c8e044a4856dc2"},"product_name":"rice","quantity":"500","price":{"$numberDecimal":"11.90"},"picture":"rice.png","category":{"$oid":"5e29e8e10d4d841ccb390649"}}
+{"_id":{"$oid":"5e14c45678c8e044a4856dc9"},"product_name":"buckwheat","quantity":"200","price":{"$numberDecimal":"10"},"picture":"buckwheat.png","category":{"$oid":"5e29e8e10d4d841ccb390649"}}
+{"_id":{"$oid":"5e14c46978c8e044a4856dd0"},"product_name":"green lentils","quantity":"200","price":{"$numberDecimal":"11.90"},"picture":"green lentils.png","category":{"$oid":"5e29e8e10d4d841ccb390649"}}
+{"_id":{"$oid":"5e14c47878c8e044a4856dd5"},"product_name":"red lentils","quantity":"150","price":{"$numberDecimal":"12"},"picture":"red lentils.png","category":{"$oid":"5e29e8e10d4d841ccb390649"}}
+{"_id":{"$oid":"5e14c48778c8e044a4856dd8"},"product_name":"white beans","quantity":"150","price":{"$numberDecimal":"17.90"},"picture":"white beans.png","category":{"$oid":"5e29e8e10d4d841ccb390649"}}
+{"_id":{"$oid":"5e14c49c78c8e044a4856ddf"},"product_name":"couscous","quantity":"180","price":{"$numberDecimal":"13"},"picture":"couscous.png","category":{"$oid":"5e29e8e10d4d841ccb390649"}}
+{"_id":{"$oid":"5e14c28378c8e044a4856d68"},"product_name":"milk 3%, 1L","quantity":"400","price":{"$numberDecimal":"5.50"},"picture":"milk3,1L.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c29378c8e044a4856d6d"},"product_name":"milk 3%, 2L","quantity":"400","price":{"$numberDecimal":"11.80"},"picture":"milk3,2L.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c2a878c8e044a4856d70"},"product_name":"milk 1%, 1L","quantity":"200","price":{"$numberDecimal":"5.59"},"picture":"milk1,1L.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c2c178c8e044a4856d77"},"product_name":"milk 1%, 2L","quantity":"200","price":{"$numberDecimal":"11.18"},"picture":"milk1,2L.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c2d778c8e044a4856d7c"},"product_name":"actimel","quantity":"200","price":{"$numberDecimal":"29.90"},"picture":"actimel.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c2ec78c8e044a4856d83"},"product_name":"eggs, M","quantity":"300","price":{"$numberDecimal":"10.40"},"picture":"eggs.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c2ff78c8e044a4856d86"},"product_name":"eggs, L","quantity":"250","price":{"$numberDecimal":"11.30"},"picture":"eggs2.jpg","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c31478c8e044a4856d8b"},"product_name":"almond drink","quantity":"80","price":{"$numberDecimal":"6.50"},"picture":"almond drink.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c32c78c8e044a4856d92"},"product_name":"soya drink","quantity":"120","price":{"$numberDecimal":"13.90"},"picture":"soya drink.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e14c34078c8e044a4856d99"},"product_name":"rice drink","quantity":"50","price":{"$numberDecimal":"13.90"},"picture":"rice drink.png","category":{"$oid":"5e29e9010d4d841ccb39064a"}}
+{"_id":{"$oid":"5e2dac6cc5726401d866d6a8"},"product_name":"white bread","quantity":"300","price":{"$numberDecimal":"9.90"},"picture":"white bread.png","category":{"$oid":"5e29e8bd0d4d841ccb390648"}}
+{"_id":{"$oid":"5e2dacbec5726401d866d6a9"},"product_name":"whole wheat bread","quantity":"250","price":{"$numberDecimal":"9.90"},"picture":"brown bread.png","category":{"$oid":"5e29e8bd0d4d841ccb390648"}}

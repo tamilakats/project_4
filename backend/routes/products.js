@@ -6,9 +6,8 @@ const checkAuth = require("../check-auth");
 const jsonParser = express.json();
 const router = express.Router();
 
-//  вернуть checkAuth после "/categories"
 // get categories
-router.get("/categories", (req, res) => {
+router.get("/categories", checkAuth, (req, res) => {
   Category.find({})
     .populate("product")
     .then(categories => {
@@ -18,13 +17,13 @@ router.get("/categories", (req, res) => {
       return res.status(500).json(err);
     });
 });
+
 // get products of categories
-router.post("/products", (req, res) => {
+router.post("/products", checkAuth, (req, res) => {
   console.log(req.body._id);
   Product.find({ category: req.body._id })
     .populate("category")
     .then(products => {
-      console.log(products);
       return res.status(200).json(products);
     })
     .catch(err => {
@@ -36,7 +35,6 @@ router.post("/search", checkAuth, (req, res) => {
   if (req.body.newSearch) {
     Product.find({ product_name: req.body.newSearch })
     .then(product => {
-      console.log(product);
       return res.status(200).json(product);
     })
     .catch(err => {
@@ -47,26 +45,26 @@ router.post("/search", checkAuth, (req, res) => {
 
 //POST http://localhost:3000/api/product
 // create new product ***
-router.post("/product", jsonParser, (req, res) => {
-  const product = new Product({
-    name: req.body.name,
-    quantity: req.body.quantity,
-    price: req.body.price,
-    category: {
-      category_id: req.body.category.category_id,
-      category_name: req.body.category.category_name
-    }
-  });
-  product
-    .save()
-    .then(result => {
-      res.status(201).json({
-        message: "SUCCESS"
-      });
-    })
-    .catch(err => {
-      return res.status(500).json({ message: err });
-    });
-});
+// router.post("/product", jsonParser, (req, res) => {
+//   const product = new Product({
+//     name: req.body.name,
+//     quantity: req.body.quantity,
+//     price: req.body.price,
+//     category: {
+//       category_id: req.body.category.category_id,
+//       category_name: req.body.category.category_name
+//     }
+//   });
+//   product
+//     .save()
+//     .then(result => {
+//       res.status(201).json({
+//         message: "SUCCESS"
+//       });
+//     })
+//     .catch(err => {
+//       return res.status(500).json({ message: err });
+//     });
+// });
 
 module.exports = router;

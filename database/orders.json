@@ -1,0 +1,1 @@
+{"_id":{"$oid":"5e5ad4071952fe02f99435d9"},"products":[],"user":{"$oid":"5e1cc1252824c5c8e9bc0bce"},"cart":{"$oid":"5e5ad3e51952fe02f99435d7"},"received_city":"jerusalem","received_street":"eee","received_date":{"$date":{"$numberLong":"1583107200000"}},"received_card":{"$numberLong":"3333333333333333"},"total_price":{"$numberDouble":"5.9"},"__v":{"$numberInt":"0"}}

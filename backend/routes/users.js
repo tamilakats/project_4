@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const User = require("../models/user");
+const checkAuth = require("../check-auth");
 
 const router = express.Router();
 
@@ -52,12 +53,13 @@ router.post("/login", (req, res,next) => {
           });
         }
         const token = jwt.sign(
-          {email: fetchedUser.email, userid: fetchedUser._id},
+          {email: fetchedUser.email, userId: fetchedUser._id},
           'secret_this_should_be_longer',
           { expiresIn: "1h"}
         );
         res.status(200).json({
-          token: token
+          token: token,
+          expiresIn: 3600
         });
       })
       .catch(err => {
@@ -67,4 +69,21 @@ router.post("/login", (req, res,next) => {
         });
       })
     });
+
+    // get user
+    router.get('/user', checkAuth, (req, res, next) => {
+      User.find({_id: req.userData.userId})
+      .catch(err => {
+        if (err) {
+          return res.status(401).json({state: 'error', message: err.message});
+      }
+    })
+      .then(result => {
+        if (!result) {
+          return res.status(401).json({ state: 'error', message: `No results!`});
+        }
+        return res.status(200).json({result });
+      })
+    });
+
 module.exports = router;

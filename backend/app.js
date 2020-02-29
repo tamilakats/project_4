@@ -37,14 +37,14 @@ mongoose
     next();
   });
 
-  app.use('*', (req, res, next) => {
-    console.log(req.body);
-    next();
-  })
+  // app.use('*', (req, res, next) => {
+  //   console.log(req.body);
+  //   next();
+  // })
 
 
   app.use('/api/user', userRoutes);
   app.use('/api/product', productRoutes);
-  // app.use('/api/cart', cartRoutes);
+  app.use('/api/cart', cartRoutes);
 
 module.exports = app;
