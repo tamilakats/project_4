@@ -32,17 +32,6 @@
   cursor: pointer;
 }
 
-/* .searchProduct {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  display: inline-flex;
-} */
-
-/* .btnSearch {
-  margin: 10px;
-} */
-
 img {
   height: 160px;
   width: 200px;
@@ -67,16 +56,8 @@ img {
   margin: 5px;
   height: 22px;
   width: 5px;
-
   padding-top: 0px;
   padding-bottom: 25px;
   padding-right: 18px;
 }
-
-
-/* .categories {
-  border: 1px solid black;
-  top: 240px;
-  padding: 0;
-} */
 
