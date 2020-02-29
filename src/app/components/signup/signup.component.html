@@ -1,7 +1,6 @@
 <p>Please fill all fields to sign up in our store.</p>
 
 <div ngClass="container">
-  <!-- <form (submit)=onStepOne(stepOneForm) #stepOneForm="ngForm" ngClass="firstStep"> -->
   <form #signup="ngForm">
     <div ngClass="firstStep">
     <div class="form-group">
@@ -51,20 +50,26 @@
        Continue
       </button>
     </div>
-    <!-- <input value="Continue" type="submit" class="btn btn-dark" ngClass="btn"> -->
-  <!-- </form> -->
 </div>
 
-
-  <!-- <form (submit)=onSignUp(stepTwoForm) #stepTwoForm="ngForm" ngClass="secondStep"> -->
-  <div
-   class="secondStep" [ngClass]="{invisible: visibility}">
+  <div class="secondStep" [ngClass]="{invisible: visibility}">
     <div class="form-group">
       <label for="city">City:</label>
-      <input name="city" class="form-control" ngModel type="text" placeholder="City" #city="ngModel" required>
+      <select name="city" class="form-control" ngModel type="text" placeholder="City" #city="ngModel" required>
+        <option value="jerusalem">Jerusalem</option>
+        <option value="tel aviv">Tel Aviv</option>
+        <option value="haifa">Haifa</option>
+        <option value="rishon lezion">Rishon Lezion</option>
+        <option value="petah tikva">Petah Tikva</option>
+        <option value="ashdod">Ashdod</option>
+        <option value="netanya">Netanya</option>
+        <option value="beer sheva">Beer Sheva</option>
+        <option value="rehovot">Rehovot</option>
+        <option value="eilat">Eilat</option>
+      </select>
       <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert alert-danger">
         <div *ngIf="city.errors.required">
-          Please enter your city.
+          Please choose your city.
         </div>
       </div>
     </div>
@@ -93,7 +98,7 @@
 
     <div class="form-group">
       <label for="lastname">Last Name:</label>
-      <input name="lastname" class="form-control" ngModel type="lastname" placeholder="Last Name"
+      <input name="lastname" class="form-control" ngModel type="text" placeholder="Last Name"
         #lastname="ngModel" required pattern="^[a-zA-Z]+$">
       <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger" >
         <div *ngIf="lastname.errors.required">
@@ -101,7 +106,6 @@
         </div>
       </div>
     </div>
-    <!-- <input value="Submit" type="submit" class="btn btn-dark" ngClass="btn"> -->
     <div class="form-group">
     <button [disabled]= "city.invalid || street.invalid || name.invalid || lastname.invalid"
      class="btn btn-dark" ngClass="btn" (click) = "onSignUp(signup)">

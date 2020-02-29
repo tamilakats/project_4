@@ -1,10 +1,26 @@
-<div ngClass="container">
-  <div ngClass="myCart">
-    <p>My Cart</p>
-    <hr>
-    <p>Cart Item: Product Name quantity price picture </p>
-    <p>Cart Item: Product Name quantity price picture </p>
-    <p>Cart Item: Product Name quantity price picture </p>
-    <h6> Total: </h6>
-    <a routerLink="/order" routerLinkActive="active-link">Order</a>
+<!-- <span *ngIf = "!cart">You don't have open cart, <a (click) = "addCart()">let's create the new one!</a></span> -->
+<div ngClass="cartClear">
+  <p>Your Cart</p><a *ngIf= "colItems.length >= 1" (click)=deleteAll()>Clear</a>
+</div>
+<hr>
+
+<div ngClass="myCart">
+  <div *ngIf="colItems.length === 0"> Cart is empty.</div>
+  <div ngClass="item" *ngFor="let item of colItems">
+    <div ngClass="picItem">
+      <img ngClass="item-pic" src='assets/images/{{item.product.picture}}'>
+    </div>
+    <div ngClassClass="nameItem">{{item.product.product_name}}</div>
+    <div ngClass="priceQuantityItem">
+      <div>{{item.product.price}} ₪</div>
+      <div>quantity: {{item.quantity}} </div>
+    </div>
+    <div ngClass="deleteItem" (click)="deleteItem(item._id)">x</div>
   </div>
+</div>
+<hr>
+
+<div ngClass="totalOrder" *ngIf= "colItems.length >= 1">
+  <h6> Total: {{totalPrice}} ₪ </h6>
+  <a routerLink="/order" routerLinkActive="active-link">Order</a>
+</div>

@@ -60,13 +60,13 @@ export class ProductsComponent implements OnInit {
   }
 
   public changeQuantity(x) {
-    if (x === '+'){this.quantity<10?this.quantity++:'no'}
-    else if (x === '-'){this.quantity>1?this.quantity--:'no'}
+    if (x === '+') {this.quantity <10? this.quantity++: 'no'}
+    else if (x === '-') {this.quantity >1? this.quantity--: 'no'}
   }
 
-  // public addToCart(_id) {
-  //   this.addItem.emit({_id,quantity:this.quantity});
-  //   this.ifPopup = false;
-  //   this.quantity = 1;
-  // }
+  public addToCart(product) {
+    this.addItem.emit({product, quantity: this.quantity});
+    this.ifPopup = false;
+    this.quantity = 1;
+  }
 }
