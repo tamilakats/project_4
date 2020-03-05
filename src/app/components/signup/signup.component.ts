@@ -10,13 +10,13 @@ import { AuthService } from 'src/app/auth.service';
 })
 export class SignupComponent {
 
+  constructor(public authService: AuthService) {}
+
   visibility: boolean = true;
 
   onStepOne() {
     this.visibility = !this.visibility;
   }
-
-  constructor(public authService: AuthService) {}
 
   onSignUp(form: NgForm) {
     console.log(form.value.password);

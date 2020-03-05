@@ -16,6 +16,8 @@ export class OrderComponent implements OnInit {
   public totalPrice = 0;
   public user;
   public dataOrder;
+  public popupOK = false;
+  public popupErr = false;
 
   ngOnInit() {
     this.cartsService.getCart().subscribe(
@@ -70,33 +72,33 @@ export class OrderComponent implements OnInit {
      );
    }
 
-   public automaticCity() {
+   public autoCity() {
     this.dataOrder.controls['received_city'].setValue(this.user.city.toLowerCase());
   }
 
-  public automaticAdress() {
+  public autoAdress() {
     this.dataOrder.controls['received_street'].setValue(this.user.street);
   }
 
   public submitOrder() {
-    let dateNow = new Date();
-    let dateOrder = dateNow.toISOString().split("T")[0];
+    const dateNow = new Date();
+    const dateOrder = dateNow.toISOString().split('T')[0];
     this.cartsService.addOrder({...this.dataOrder.value, user: this.user._id, cart: this.cart._id,
       total_price: this.totalPrice, products: this.colItems, user_name: this.user.name + ' ' + this.user.lastname,
       order_date: dateOrder}).subscribe(
       (res: any) => {
         if(res.state = 'success') {
           console.log(res.state);
-          // this.ifPopup = true;
+          this.popupOK = true;
           // this.pathPdf = res.receiptPdf;
         } else {
           console.log(res.state);
-          // this.ifPopupError = true;
+          this.popupErr = true;
         }
       },
       err => {
         console.log(err);
-        // this.ifPopupError = true;
+        this.popupErr = true;
       }
     );
   }
