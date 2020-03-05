@@ -1,9 +1,9 @@
 <nav class="navbar fixed-top" style="background-color: #238877;">
     <a class="navbar-brand" routerLink="/home" routerLinkActive = "active-link" style="color: rgb(230, 180, 227);">TamStore</a>
     <span class="navbar-text">
-        Contact us:
-        <h4 *ngIf="!userIsAuthenticated">Hello, guest</h4>
-        <h4 *ngIf="userIsAuthenticated">Hello, name</h4>
+      <pre>Contact us: tel.: 0543539784 e-mail: tamila.katz@gmail.com</pre>
+        <h4 *ngIf="!userIsAuthenticated">Hello, guest!</h4>
+        <h4 *ngIf="userIsAuthenticated">Hello, {{user}}!</h4>
       </span>
   </nav>
 
