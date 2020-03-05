@@ -33,7 +33,7 @@
       <hr>
       <form [formGroup]="dataOrder" (ngSubmit)="submitOrder()">
         <div>
-          <label for="city" (dblclick)="automaticCity()" title="double click to autofill">
+          <label for="city" (dblclick)="autoCity()" title="double click to autofill">
             City
           </label>
           <select name="city" id="city" formControlName="received_city">
@@ -51,7 +51,7 @@
           </select>
         </div><br>
         <div>
-          <label for="street" (dblclick)="automaticAdress()" title="double click to autofill">
+          <label for="street" (dblclick)="autoAdress()" title="double click to autofill">
             Street
           </label>
           <input type="text" name="street" id="street" formControlName="received_street">
@@ -60,14 +60,16 @@
             Shipping Date
           </label>
           <input type="date" name="date" id="date" formControlName="received_date">
-        </div><hr><br>
-        <p>Payments: </p><hr>
+        </div>
+        <hr><br>
+        <p>Payments: </p>
+        <hr>
         <div>
           <label for="card">
             Credit Card
           </label>
-          <input type="tel" maxlength="16" name="card" id="card"
-           pattern="\d*" formControlName="received_card" placeholder="16 digits">
+          <input type="tel" maxlength="16" name="card" id="card" pattern="\d*" formControlName="received_card"
+            placeholder="16 digits">
         </div><br>
 
         <input id="btnSubmitOrder" type="submit" value="Order" [disabled]="!dataOrder.valid">
@@ -76,4 +78,15 @@
     </div>
   </div>
 
+  <div ngClass="popUpOK" *ngIf="popupOK">
+    <div>
+      <h3>Payment successful.<br>Thank you for your order.</h3>
+    </div>
+  </div>
+  <div ngClass="popUpOK" *ngIf="popupErr">
+    <div>
+      <h3>Your payment failed.<br>Please try again.</h3>
+      <a routerLink="/order" routerLinkActive="active-link">Return</a>
+    </div>
+  </div>
 </div>
