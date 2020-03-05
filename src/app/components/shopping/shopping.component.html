@@ -1,6 +1,6 @@
 <div ngClass="container">
 
-  <app-cart ngClass="myCart"></app-cart>
-  <app-products ngClass="products"></app-products>
+  <app-cart ngClass="myCart" [cart] = 'cart' [totalPrice] = 'totalPrice' [colItems] = 'colItems' (removeItem) = 'deleteItem($event)'></app-cart>
+  <app-products ngClass="products" (addItem)="addItem($event)"></app-products>
 
 </div>

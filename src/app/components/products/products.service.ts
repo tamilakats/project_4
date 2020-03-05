@@ -18,7 +18,6 @@ export class ProductsService {
 
   public getProducts(_id) {
     const token = localStorage.getItem('token');
-    //console.log(category_id);
     return this.http.post('http://localhost:3000/api/product/products', _id,
     {
       headers: { 'Content-Type': 'application/json', authorization: token }

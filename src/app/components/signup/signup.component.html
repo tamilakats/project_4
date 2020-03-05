@@ -3,7 +3,6 @@
 </p>
 
 <div ngClass="container">
-  <!-- <form (submit)=onStepOne(stepOneForm) #stepOneForm="ngForm" ngClass="firstStep"> -->
   <form #signup="ngForm">
     <div ngClass="firstStep">
       <div class="form-group">
@@ -66,28 +65,6 @@
         </button>
       </div>
     </div>
-<<<<<<< Updated upstream
-    <div class="form-group">
-      <button [disabled] = "userid.invalid || password.invalid || email.invalid || passwordconf.invalid"
-       class="btn btn-dark" ngClass="btn" (click)="onStepOne()">
-       Continue
-      </button>
-    </div>
-    <!-- <input value="Continue" type="submit" class="btn btn-dark" ngClass="btn"> -->
-  <!-- </form> -->
-</div>
-
-
-  <!-- <form (submit)=onSignUp(stepTwoForm) #stepTwoForm="ngForm" ngClass="secondStep"> -->
-  <div
-   class="secondStep" [ngClass]="{invisible: visibility}">
-    <div class="form-group">
-      <label for="city">City:</label>
-      <input name="city" class="form-control" ngModel type="text" placeholder="City" #city="ngModel" required>
-      <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert alert-danger">
-        <div *ngIf="city.errors.required">
-          Please enter your city.
-=======
 
     <div class="secondStep" [ngClass]="{invisible: visibility}">
       <div class="form-group">
@@ -108,10 +85,9 @@
           <div *ngIf="city.errors.required">
             Please choose your city.
           </div>
->>>>>>> Stashed changes
         </div>
       </div>
-
+      
       <div class="form-group">
         <label for="street">Street:</label>
         <input name="street" class="form-control" ngModel type="text" placeholder="Street" #street="ngModel" required
@@ -138,47 +114,48 @@
         </div>
       </div>
 
-<<<<<<< Updated upstream
-    <div class="form-group">
-      <label for="lastname">Last Name:</label>
-      <input name="lastname" class="form-control" ngModel type="lastname" placeholder="Last Name"
-        #lastname="ngModel" required pattern="^[a-zA-Z]+$">
-      <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger" >
-        <div *ngIf="lastname.errors.required">
-          Please enter your last name.
-=======
-      <div class="form-group">
+      <<<<<<< Updated upstream <div class="form-group">
         <label for="lastname">Last Name:</label>
         <input name="lastname" class="form-control" ngModel type="text" placeholder="Last Name" #lastname="ngModel"
-          required pattern="[A-Z]{1}[a-zA-Z]+$">
+          required pattern="^[a-zA-Z]+$">
         <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
           <div *ngIf="lastname.errors.required">
             Please enter your last name.
+            =======
+            <div class="form-group">
+              <label for="lastname">Last Name:</label>
+              <input name="lastname" class="form-control" ngModel type="text" placeholder="Last Name"
+                #lastname="ngModel" required pattern="[A-Z]{1}[a-zA-Z]+$">
+              <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+                <div *ngIf="lastname.errors.required">
+                  Please enter your last name.
+                </div>
+                <div *ngIf="lastname.errors.pattern">
+                  The first letter should be in the upper case.
+                </div>
+                >>>>>>> Stashed changes
+              </div>
+            </div>
+            <div class="form-group">
+              <button [disabled]="city.invalid || street.invalid || name.invalid || lastname.invalid"
+                class="btn btn-dark" ngClass="btn" (click)="onSignUp(signup)">
+                Submit
+              </button>
+            </div>
           </div>
-          <div *ngIf="lastname.errors.pattern">
-            The first letter should be in the upper case.
-          </div>
->>>>>>> Stashed changes
+          <<<<<<< HEAD <<<<<<< Updated upstream <!-- <input value="Submit" type="submit" class="btn btn-dark"
+            ngClass="btn"> -->
+            =======
+            >>>>>>> cf8e6ab1161c5d8bffc7604a5ee6ec972a610fe2
+            <div class="form-group">
+              <button [disabled]="city.invalid || street.invalid || name.invalid || lastname.invalid"
+                class="btn btn-dark" ngClass="btn" (click)="onSignUp(signup)">
+                Submit
+              </button>
+            </div>
         </div>
-      </div>
-      <div class="form-group">
-        <button [disabled]="city.invalid || street.invalid || name.invalid || lastname.invalid" class="btn btn-dark"
-          ngClass="btn" (click)="onSignUp(signup)">
-          Submit
-        </button>
-      </div>
-    </div>
-<<<<<<< Updated upstream
-    <!-- <input value="Submit" type="submit" class="btn btn-dark" ngClass="btn"> -->
-    <div class="form-group">
-    <button [disabled]= "city.invalid || street.invalid || name.invalid || lastname.invalid"
-     class="btn btn-dark" ngClass="btn" (click) = "onSignUp(signup)">
-     Submit
-    </button>
-    </div>
-  </div>
-</form>
-=======
   </form>
->>>>>>> Stashed changes
+  =======
+  </form>
+  >>>>>>> Stashed changes
 </div>

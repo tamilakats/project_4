@@ -1,5 +1,51 @@
-div > a {
-  position: absolute;
-  left: 260px;
-  bottom: 35px;
+.cartClear {
+  display: flex;
+  justify-content: space-around;
+}
+
+.myCart {
+  border: 1px solid black;
+  overflow: auto;
+  width: 350px;
+  height: 630px;
+  padding: 15px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameItem {
+  text-align: center;
+  padding:0 5px;
+}
+
+.priceQuantityItem {
+  /* display: flex;
+  justify-content: space-around; */
+}
+
+.deleteItem {
+  text-align: center;
+  width: 30px;
+  font-weight: 800;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  color: blue;
+}
+
+img {
+  height: 60px;
+  width: auto;
+}
+
+.totalOrder {
+  display: flex;
+  justify-content: space-around;
 }

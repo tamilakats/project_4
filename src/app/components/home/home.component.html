@@ -1,7 +1,7 @@
 <div ngClass="container">
- <!-- только для разработки - потом убрать, (пользователь регистрируется и попадает на страницу с товарами, а если нет-он не может начать покупать) -->
-  <a routerLink="/shopping" routerLinkActive="active-link">Start Shopping</a>
-  <div ngClass="login">
+
+  <a *ngIf="userIsAuthenticated" routerLink="/shopping" routerLinkActive="active-link">Start Shopping</a>
+  <div *ngIf= "!userIsAuthenticated" ngClass="login">
 
     <h3>Registered?</h3>
 
@@ -30,11 +30,10 @@
   </div>
 
   <div ngClass="about">
-    /Why you should buy in our store + pic./
+    Our store is the best in the town! Our delivery is the fastest and quality of products is perfect!
   </div>
 
   <div ngClass="info">
-    /pic/
     Available products in our store - number **
 
     Number of orders submitted in our store **
