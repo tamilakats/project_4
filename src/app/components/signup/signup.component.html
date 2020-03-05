@@ -1,50 +1,72 @@
-<p>Please fill all fields to sign up in our store.</p>
+<p>Please fill this form to sign up in our store.
+  All fields are required.
+</p>
 
 <div ngClass="container">
   <!-- <form (submit)=onStepOne(stepOneForm) #stepOneForm="ngForm" ngClass="firstStep"> -->
   <form #signup="ngForm">
     <div ngClass="firstStep">
-    <div class="form-group">
-      <label for="userid">ID:</label>
-      <input name="userid" class="form-control" ngModel type="text" placeholder="ID" #userid="ngModel" required pattern="[0-9]{9}">
-      <div *ngIf="userid.invalid && (userid.dirty || userid.touched)" class="alert alert-danger">
-        <div *ngIf="userid.errors.required">
-          Please enter your ID.
+      <div class="form-group">
+        <label for="userid">ID:</label>
+        <input name="userid" class="form-control" ngModel type="text" placeholder="ID" #userid="ngModel" required
+          pattern="[0-9]{9}">
+        <div *ngIf="userid.invalid && (userid.dirty || userid.touched)" class="alert alert-danger">
+          <div *ngIf="userid.errors.required">
+            Please enter your ID.
+          </div>
+          <div *ngIf="userid.errors.pattern">
+            ID must have 9 digits.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="email">E-mail:</label>
-      <input name="email" class="form-control" ngModel type="email" placeholder="E-mail" #email="ngModel" required email>
-      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
-        <div *ngIf="email.errors.required">
-          Please enter your e-mail.
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input name="email" class="form-control" ngModel type="email" placeholder="E-mail" #email="ngModel" required
+          email>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <div *ngIf="email.errors.required">
+            Please enter your e-mail.
+          </div>
+          <div *ngIf="email.errors.email">
+            Please enter your correct e-mail.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input name="password" class="form-control" ngModel type="password" placeholder="Password"
-        #password="ngModel" required>
-      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger" >
-        <div *ngIf="password.errors.required">
-          Please enter your password.
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input name="password" class="form-control" ngModel type="password" placeholder="Password" #password="ngModel"
+          required>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+          <div *ngIf="password.errors.required">
+            Please enter your password.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="passwordconf">Confirm:</label>
-      <input name="passwordconf" class="form-control" ngModel type="password" placeholder="Password Confirm"
-        #passwordconf="ngModel" required>
-      <div *ngIf="passwordconf.invalid && (passwordconf.dirty || passwordconf.touched)" class="alert alert-danger" >
-        <div *ngIf="passwordconf.errors.required">
-          Please enter your correct password.
+      <div class="form-group">
+        <label for="passwordconf">Confirm:</label>
+        <input name="passwordconf" class="form-control" ngModel type="password" placeholder="Password Confirm"
+          #passwordconf="ngModel" required>
+        <div *ngIf="passwordconf.invalid && (passwordconf.dirty || passwordconf.touched)" class="alert alert-danger">
+          <div *ngIf="passwordconf.errors.required">
+            Please duplicate your password.
+          </div>
+        </div>
+        <div *ngIf="password.value != passwordconf.value && (passwordconf.dirty || passwordconf.touched)">
+          Please duplicate your password correctly.
         </div>
       </div>
+      <div class="form-group">
+        <button
+          [disabled]="userid.invalid || password.invalid || email.invalid || passwordconf.invalid || password.value!= passwordconf.value"
+          class="btn btn-dark" ngClass="btn" (click)="onStepOne()">
+          Continue
+        </button>
+      </div>
     </div>
+<<<<<<< Updated upstream
     <div class="form-group">
       <button [disabled] = "userid.invalid || password.invalid || email.invalid || passwordconf.invalid"
        class="btn btn-dark" ngClass="btn" (click)="onStepOne()">
@@ -65,32 +87,58 @@
       <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert alert-danger">
         <div *ngIf="city.errors.required">
           Please enter your city.
+=======
+
+    <div class="secondStep" [ngClass]="{invisible: visibility}">
+      <div class="form-group">
+        <label for="city">City:</label>
+        <select name="city" class="form-control" ngModel type="text" placeholder="City" #city="ngModel" required>
+          <option value="jerusalem">Jerusalem</option>
+          <option value="tel aviv">Tel Aviv</option>
+          <option value="haifa">Haifa</option>
+          <option value="rishon lezion">Rishon Lezion</option>
+          <option value="petah tikva">Petah Tikva</option>
+          <option value="ashdod">Ashdod</option>
+          <option value="netanya">Netanya</option>
+          <option value="beer sheva">Beer Sheva</option>
+          <option value="rehovot">Rehovot</option>
+          <option value="eilat">Eilat</option>
+        </select>
+        <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert alert-danger">
+          <div *ngIf="city.errors.required">
+            Please choose your city.
+          </div>
+>>>>>>> Stashed changes
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="street">Street:</label>
-      <input name="street" class="form-control" ngModel type="text" placeholder="Street"
-       #street="ngModel" required pattern="^[a-zA-Z]+$">
-      <div *ngIf="street.invalid && (street.dirty || street.touched)" class="alert alert-danger">
-        <div *ngIf="street.errors.required">
-          Please enter your street.
+      <div class="form-group">
+        <label for="street">Street:</label>
+        <input name="street" class="form-control" ngModel type="text" placeholder="Street" #street="ngModel" required
+          pattern="^[a-zA-Z]+$">
+        <div *ngIf="street.invalid && (street.dirty || street.touched)" class="alert alert-danger">
+          <div *ngIf="street.errors.required">
+            Please enter your street.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input name="name" class="form-control" ngModel type="text" placeholder="Name"
-        #name="ngModel" required pattern="^[a-zA-Z]+$">
-      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger" >
-        <div *ngIf="name.errors.required">
-          Please enter your name.
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input name="name" class="form-control" ngModel type="text" placeholder="Name" #name="ngModel" required
+          pattern="[A-Z]{1}[a-zA-Z]+$">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          <div *ngIf="name.errors.required">
+            Please enter your name.
+          </div>
+          <div *ngIf="name.errors.pattern">
+            The first letter should be in the upper case.
+          </div>
+
         </div>
       </div>
-    </div>
 
+<<<<<<< Updated upstream
     <div class="form-group">
       <label for="lastname">Last Name:</label>
       <input name="lastname" class="form-control" ngModel type="lastname" placeholder="Last Name"
@@ -98,9 +146,29 @@
       <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger" >
         <div *ngIf="lastname.errors.required">
           Please enter your last name.
+=======
+      <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input name="lastname" class="form-control" ngModel type="text" placeholder="Last Name" #lastname="ngModel"
+          required pattern="[A-Z]{1}[a-zA-Z]+$">
+        <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+          <div *ngIf="lastname.errors.required">
+            Please enter your last name.
+          </div>
+          <div *ngIf="lastname.errors.pattern">
+            The first letter should be in the upper case.
+          </div>
+>>>>>>> Stashed changes
         </div>
       </div>
+      <div class="form-group">
+        <button [disabled]="city.invalid || street.invalid || name.invalid || lastname.invalid" class="btn btn-dark"
+          ngClass="btn" (click)="onSignUp(signup)">
+          Submit
+        </button>
+      </div>
     </div>
+<<<<<<< Updated upstream
     <!-- <input value="Submit" type="submit" class="btn btn-dark" ngClass="btn"> -->
     <div class="form-group">
     <button [disabled]= "city.invalid || street.invalid || name.invalid || lastname.invalid"
@@ -110,4 +178,7 @@
     </div>
   </div>
 </form>
+=======
+  </form>
+>>>>>>> Stashed changes
 </div>
