@@ -1,0 +1,92 @@
+<div ngClass="container">
+
+  <div ngClass="cart">
+    <div ngClass='cartBack'>
+      <p>Your cart</p><a routerLink="/shopping" routerLinkActive="active-link">Back to shop</a>
+    </div>
+
+    <hr>
+    <div ngClass="myCart">
+      <div ngClass="item" *ngFor="let item of colItems">
+        <div ngClass="picItem">
+          <img ngClass="item-pic" src='assets/images/{{item.product.picture}}'>
+        </div>
+        <div ngClassClass="nameItem">{{item.product.product_name}}</div>
+        <div ngClass="priceQuantityItem">
+          <div>{{item.product.price}} ₪</div>
+          <div>quantity: {{item.quantity}} </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div ngClass="total">
+      <h6>Total: {{totalPrice}} ₪ </h6>
+    </div>
+  </div>
+
+  <div ngClass="order">
+    <p>Order</p>
+    <hr>
+    <div ngClass="shippingDetails">
+      <p>Shipping Details: </p>
+      <hr>
+      <form [formGroup]="dataOrder" (ngSubmit)="submitOrder()">
+        <div>
+          <label for="city" (dblclick)="autoCity()" title="double click to autofill">
+            City
+          </label>
+          <select name="city" id="city" formControlName="received_city">
+
+            <option value="jerusalem">Jerusalem</option>
+            <option value="tel aviv">Tel Aviv</option>
+            <option value="haifa">Haifa</option>
+            <option value="rishon lezion">Rishon Lezion</option>
+            <option value="petah tikva">Petah Tikva</option>
+            <option value="ashdod">Ashdod</option>
+            <option value="netanya">Netanya</option>
+            <option value="beer sheva">Beer Sheva</option>
+            <option value="rehovot">Rehovot</option>
+            <option value="eilat">Eilat</option>
+          </select>
+        </div><br>
+        <div>
+          <label for="street" (dblclick)="autoAdress()" title="double click to autofill">
+            Street
+          </label>
+          <input type="text" name="street" id="street" formControlName="received_street">
+        </div><br>
+        <div><label for="date">
+            Shipping Date
+          </label>
+          <input type="date" name="date" id="date" formControlName="received_date">
+        </div>
+        <hr><br>
+        <p>Payments: </p>
+        <hr>
+        <div>
+          <label for="card">
+            Credit Card
+          </label>
+          <input type="tel" maxlength="16" name="card" id="card" pattern="\d*" formControlName="received_card"
+            placeholder="16 digits">
+        </div><br>
+
+        <input id="btnSubmitOrder" type="submit" value="Order" [disabled]="!dataOrder.valid">
+
+      </form>
+    </div>
+  </div>
+
+  <div ngClass="popUpOK" *ngIf="popupOK">
+    <div>
+      <h3>Payment successful.<br>Thank you for your order.</h3>
+    </div>
+  </div>
+  <div ngClass="popUpOK" *ngIf="popupErr">
+    <div>
+      <h3>Your payment failed.<br>Please try again.</h3>
+      <a routerLink="/order" routerLinkActive="active-link">Return</a>
+    </div>
+  </div>
+</div>
